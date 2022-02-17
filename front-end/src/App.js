@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-const API = process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_KEY;
 
 console.log(process.env);
 function App() {
