@@ -44,8 +44,8 @@ const deleteProd = async (id) => {
   }
 };
 
-const updateProd = async (id, prod) => {
-  const { img, name, description, price, rating, featured } = prod;
+const updateProd = async (id, product) => {
+  const { img, name, description, price, rating, featured } = product;
   try {
     const updated = await db.one(
       "UPDATE product SET img=$2, name=$3, description=$4, price=$5, rating=$6, featured=$7 WHERE id=$1 RETURNING *",
