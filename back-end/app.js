@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const productController = require("./controllers/productController");
 
 // CONFIGURATION
 const app = express();
@@ -14,23 +15,11 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
-const db = require("./db/dbConfig.js");
+app.use("/products", productController);
 
-app.get("/test", async (req, res) => {
-  try {
-    const allDays = await db.any("SELECT * FROM test");
-    res.json(allDays);
-  } catch (err) {
-    res.json(err);
-  }
+app.get("*", (request, response) => {
+  response.status(404).json({ Error: "Page Not Found!" });
 });
-
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
 
 // EXPORT
 module.exports = app;

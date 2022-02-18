@@ -3,9 +3,14 @@ CREATE DATABASE cta_dev;
 
 \c cta_dev;
 
-DROP TABLE IF EXISTS test;
+DROP TABLE IF EXISTS product;
 
-CREATE TABLE test (
+CREATE TABLE product (
     id SERIAL PRIMARY KEY, 
-    name TEXT
+    img TEXT NOT NULL,
+    name TEXT NOT NULL,
+    description TEXT,
+    price DECIMAL(6,2) NOT NULL,
+    rating INT CHECK(rating > 0 AND rating <= 5),
+    featured BOOLEAN
 );
