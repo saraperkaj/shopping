@@ -1,28 +1,24 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
-const API = process.env.REACT_APP_API_URL;
+import { Route, Routes } from "react-router-dom";
+import Index from "./Pages/Index";
+import NavBar from "./Components/NavBar";
+import Home from "./Pages/Home";
+import New from "./Pages/New";
+import Show from "./Pages/Show";
+import Edit from "./Pages/Edit";
 
-console.log(process.env);
+// const API = process.env.REACT_APP_API_URL;
+
 function App() {
-  const [days, setDays] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`${API}/test`)
-      .then(
-        (response) => {
-          setDays(response.data);
-        },
-        (error) => console.log("get", error)
-      )
-      .catch((c) => console.warn("catch", c));
-  }, []);
   return (
     <div>
-      <ul>
-        {days.map((day) => (
-          <li key={day.name}>{day.name}</li>
-        ))}
-      </ul>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Index />} />
+        <Route path="/new" element={<New />} />
+        <Route path="/products/:id" element={<Show />} />
+        <Route path="/products/:id/edit" element={<Edit />} />
+      </Routes>
     </div>
   );
 }
