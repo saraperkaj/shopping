@@ -1,7 +1,6 @@
 // DEPENDENCIES
-const cors = require("cors");
 const express = require("express");
-const productController = require("./controllers/productController");
+const cors = require("cors");
 
 // CONFIGURATION
 const app = express();
@@ -10,12 +9,13 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON
 
+const productController = require("./controllers/productController");
+app.use("/products", productController);
+
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
-
-app.use("/products", productController);
 
 app.get("*", (request, response) => {
   response.status(404).json({ Error: "Page Not Found!" });
