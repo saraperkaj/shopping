@@ -6,18 +6,16 @@ import New from "./Pages/New";
 import Show from "./Pages/Show";
 import Edit from "./Pages/Edit";
 
-// const API = process.env.REACT_APP_API_URL;
-
 function App() {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/products" element={<Index />} />
-        <Route path="/new" element={<New />} />
-        <Route path="/products/:id" element={<Show />} />
-        <Route path="/products/:id/edit" element={<Edit />} />
+        {/* <Route path="/new" element={<New />} /> */}
+        {/* <Route path="/products/:id" element={<Show />} /> */}
+        {/* <Route path="/products/:id/edit" element={<Edit />} /> */}
       </Routes>
     </div>
   );
