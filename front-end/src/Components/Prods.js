@@ -16,7 +16,7 @@ function Prods() {
         setProds(response.data);
       })
       .catch((error) => console.log("cAtch", error));
-  }, []);
+  }, [API]);
 
   const displayProds = () => {
     return prods ? (
@@ -34,9 +34,9 @@ function Prods() {
     );
   };
 
-  if (!prods) {
-    return null;
-  }
+  // if (!prods) {
+  //   return null;
+  // }
 
   return <>{displayProds()}</>;
 }

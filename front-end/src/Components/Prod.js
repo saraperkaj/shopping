@@ -1,10 +1,9 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Prod({ prod }) {
-  const { id } = useParams;
   return (
     <tr>
-      <Link to={`/products/${id}`}>
+      <Link to={`/products/${prod.id}`}>
         <td>{prod.name}</td>
         <td>
           <img src={prod.img} width="200" alt={prod.name} />

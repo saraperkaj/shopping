@@ -9,12 +9,12 @@ import Edit from "./Pages/Edit";
 function App() {
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/products" element={<Index />} />
         {/* <Route path="/new" element={<New />} /> */}
-        {/* <Route path="/products/:id" element={<Show />} /> */}
+        <Route path="/products/:id" element={<Show />} />
         {/* <Route path="/products/:id/edit" element={<Edit />} /> */}
       </Routes>
     </div>
