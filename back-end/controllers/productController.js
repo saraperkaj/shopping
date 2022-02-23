@@ -1,5 +1,4 @@
 const express = require("express");
-const { one } = require("../db/dbConfig");
 
 const {
   getAllProd,
@@ -23,7 +22,7 @@ products.get("/", async (request, response) => {
 });
 
 products.get("/:id", async (request, response) => {
-  //   console.log("GET request to /products/:id");
+  // console.log("GET request to /products/:id");
   const oneProd = await getOneProd(request.params.id);
   if (oneProd.id) {
     response.status(200).json(oneProd);
