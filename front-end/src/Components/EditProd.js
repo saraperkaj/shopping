@@ -53,10 +53,13 @@ function EditProd() {
   //handleNumberChange??
 
   return (
-    <form>
-      <div>
-        <label htmlFor="name">Name:</label>
+    <form className="box">
+      <div className="field content is-large">
+        <label className="label" htmlFor="name">
+          Name:
+        </label>
         <input
+          className="input"
           id="name"
           name="name"
           value={prod.name.toUpperCase()}
@@ -65,8 +68,12 @@ function EditProd() {
           placeholder="REAVER VANDAL"
           required
         />
-        <label htmlFor="img">Image URL:</label>
+        <br />
+        <label className="label" htmlFor="img">
+          Image URL:
+        </label>
         <input
+          className="input"
           id="img"
           name="img"
           value={prod.img}
@@ -75,8 +82,12 @@ function EditProd() {
           placeholder="https://cx.valorbuff.com/blob/BRcfB9CUan3nlri3KNHnlIbJKVhbBtc0hX9S5txXi6s2hXQ3lriN5aUbi+pGva0E?w=900"
           required
         />
-        <label htmlFor="">Price:</label>
+        <br />
+        <label className="label" htmlFor="">
+          Price:
+        </label>
         <input
+          className="input"
           id="price"
           name="price"
           value={prod.price}
@@ -84,7 +95,10 @@ function EditProd() {
           onChange={handleTextChange}
           required
         />
-        <label htmlFor="rating">Rating:</label>
+        <br />
+        <label className="label" htmlFor="rating">
+          Rating:
+        </label>
         {/* <input
           id="rating"
           name="rating"
@@ -93,6 +107,7 @@ function EditProd() {
           onChange={handleTextChange}
         /> */}
         <select
+          className="select"
           name="rating"
           id="rating"
           value={prod.rating}
@@ -104,8 +119,12 @@ function EditProd() {
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <label htmlFor="description">Description:</label>
+        <br />
+        <label className="label" htmlFor="description">
+          Description:
+        </label>
         <input
+          className="input"
           id="description"
           name="description"
           value={prod.description === null ? "" : prod.description}
@@ -113,7 +132,11 @@ function EditProd() {
           onChange={handleTextChange}
           placeholder="describe the skin?"
         />
-        <label htmlFor="featured">Featured?</label>
+        <br />
+        <label className="checkbox" htmlFor="featured">
+          Featured?
+        </label>
+        <br />
         <input
           id="featured"
           name="featured"
@@ -122,6 +145,7 @@ function EditProd() {
           onChange={handleCheckboxChange}
           checked={prod.featured}
         />
+        <br />
         <button className="button is-primary" onClick={handleSubmit}>
           Submit
         </button>

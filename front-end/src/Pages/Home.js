@@ -76,7 +76,7 @@ function Home() {
 
   return (
     <div>
-      <h2>Home</h2>
+      <h2 className="title is-3">Home</h2>
       Welcome, continue to Products to start viewing Valorant skins!
     </div>
   );

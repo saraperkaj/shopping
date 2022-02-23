@@ -52,10 +52,13 @@ function NewProd() {
   //handleNumberChange??
 
   return (
-    <form>
-      <div>
-        <label htmlFor="name">Name:</label>
+    <form className="box">
+      <div className="field content is-large">
+        <label className="label" className="label" htmlFor="name">
+          Name:
+        </label>
         <input
+          className="input"
           id="name"
           name="name"
           value={prod.name.toUpperCase()}
@@ -64,8 +67,12 @@ function NewProd() {
           placeholder="REAVER VANDAL"
           required
         />
-        <label htmlFor="img">Image URL:</label>
+        <br />
+        <label className="label" htmlFor="img">
+          Image URL:
+        </label>
         <input
+          className="input"
           id="img"
           name="img"
           value={prod.img}
@@ -74,8 +81,12 @@ function NewProd() {
           placeholder="https://cx.valorbuff.com/blob/BRcfB9CUan3nlri3KNHnlIbJKVhbBtc0hX9S5txXi6s2hXQ3lriN5aUbi+pGva0E?w=900"
           required
         />
-        <label htmlFor="">Price:</label>
+        <br />
+        <label className="label" htmlFor="price">
+          Price:
+        </label>
         <input
+          className="input"
           id="price"
           name="price"
           value={prod.price}
@@ -83,7 +94,10 @@ function NewProd() {
           onChange={handleTextChange}
           required
         />
-        <label htmlFor="rating">Rating:</label>
+        <br />
+        <label className="label" htmlFor="rating">
+          Rating:
+        </label>
         {/* <input
           id="rating"
           name="rating"
@@ -92,6 +106,7 @@ function NewProd() {
           onChange={handleTextChange}
         /> */}
         <select
+          className="select"
           name="rating"
           id="rating"
           value={prod.rating}
@@ -103,8 +118,12 @@ function NewProd() {
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <label htmlFor="description">Description:</label>
+        <br />
+        <label className="label" htmlFor="description">
+          Description:
+        </label>
         <input
+          className="input"
           id="description"
           name="description"
           value={prod.description}
@@ -112,7 +131,11 @@ function NewProd() {
           onChange={handleTextChange}
           placeholder="describe the skin?"
         />
-        <label htmlFor="featured">Featured?</label>
+        <br />
+        <label className="checkbox" htmlFor="featured">
+          Featured?
+        </label>
+        <br />
         <input
           id="featured"
           name="featured"
@@ -121,13 +144,14 @@ function NewProd() {
           onChange={handleCheckboxChange}
           checked={prod.featured}
         />
+        <br />
         <button className="button is-primary" onClick={handleSubmit}>
           Submit
         </button>
         <button className="button is-danger" onClick={handleClear}>
           Clear
         </button>
-        <Link to={`/products/${id}`}>
+        <Link to={`/products`}>
           <button className="button is-light">Back</button>
         </Link>
       </div>
