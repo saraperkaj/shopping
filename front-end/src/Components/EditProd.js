@@ -53,7 +53,7 @@ function EditProd() {
   //handleNumberChange??
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <div>
         <label htmlFor="name">Name:</label>
         <input
