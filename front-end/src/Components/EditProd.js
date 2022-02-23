@@ -122,10 +122,14 @@ function EditProd() {
           onChange={handleCheckboxChange}
           checked={prod.featured}
         />
-        <button onClick={handleSubmit}>Submit</button>
-        <button onClick={handleClear}>Clear</button>
+        <button className="button is-primary" onClick={handleSubmit}>
+          Submit
+        </button>
+        <button className="button is-danger" onClick={handleClear}>
+          Clear
+        </button>
         <Link to={`/products/${id}`}>
-          <button>Back</button>
+          <button className="button is-light">Back</button>
         </Link>
       </div>
     </form>

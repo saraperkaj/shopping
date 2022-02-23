@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 import Edit from "./Pages/Edit";
+import "bulma/css/bulma.min.css";
 
 function App() {
   return (

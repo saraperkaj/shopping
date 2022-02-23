@@ -57,13 +57,15 @@ function ProdDetails() {
           <p>{prod.featured ? <span>🌟</span> : <span> &nbsp; </span>}</p>
         </Link>
       </>
-      <Link to={`/products/${id}/edit`}>
-        <button>Edit</button>
+      <button className="button is-light">
+        <Link to={`/products/${id}/edit`}>Edit</Link>
+      </button>
+      <Link to={`/products`}>
+        <button className="button is-light">Back</button>
       </Link>
-      <Link to={`/products/`}>
-        <button>Back</button>
-      </Link>
-      <button onClick={handleDelete}>Delete</button>
+      <button className="button is-danger" onClick={handleDelete}>
+        Delete
+      </button>
     </div>
   );
 }
