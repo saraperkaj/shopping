@@ -108,7 +108,7 @@ function EditProd() {
         <input
           id="description"
           name="description"
-          value={prod.description}
+          value={prod.description === null ? "" : prod.description}
           type="text"
           onChange={handleTextChange}
           placeholder="describe the skin?"
