@@ -37,7 +37,7 @@ products.post("/", async (request, response) => {
   if (newProd.id) {
     response.status(200).json(newProd);
   } else {
-    response.status(404).json({ error: error });
+    response.status(404).json({ error: "Can't add that! ),:" });
   }
 });
 
