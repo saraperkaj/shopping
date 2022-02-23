@@ -35,6 +35,14 @@ function ProdDetails() {
       .catch((error) => console.log(`catch `, error));
   };
 
+  const showDescription = () => {
+    return prod.description ? (
+      <p>Description: {prod.description}</p>
+    ) : (
+      <p>{prod.description}</p>
+    );
+  };
+
   return (
     <div>
       <>
@@ -44,7 +52,7 @@ function ProdDetails() {
         </p>
         <p>${Number(prod.price).toFixed(2)}</p>
         <p>Rating: {prod.rating}/5</p>
-        <p>{prod.description}</p>
+        {showDescription()}
         <Link to={`/`}>
           <p>{prod.featured ? <span>🌟</span> : <span> &nbsp; </span>}</p>
         </Link>
