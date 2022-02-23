@@ -37,16 +37,16 @@ function ProdDetails() {
 
   return (
     <div>
-      <tr>
-        <td>{prod.name}</td>
-        <td>
+      <>
+        <p>{prod.name}</p>
+        <p>
           <img src={prod.img} width="200" alt={prod.name} />
-        </td>
-        <td>{Number(prod.price).toFixed(2)}</td>
-        <td>{prod.rating}</td>
-        <td>{prod.description}</td>
-        <td>{prod.featured ? <span>🌟</span> : <span> &nbsp; </span>}</td>
-      </tr>
+        </p>
+        <p>{Number(prod.price).toFixed(2)}</p>
+        <p>{prod.rating}</p>
+        <p>{prod.description}</p>
+        <p>{prod.featured ? <span>🌟</span> : <span> &nbsp; </span>}</p>
+      </>
       <Link to={`/products/${id}/edit`}>
         <button>Edit</button>
       </Link>
