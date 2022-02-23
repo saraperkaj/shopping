@@ -8,7 +8,7 @@ function Prod({ prod }) {
         <td>
           <img src={prod.img} width="200" alt={prod.name} />
         </td>
-        <td>{prod.price}</td>
+        <td>{Number(prod.price).toFixed(2)}</td>
         <td>{prod.rating}</td>
         {/* <td>{prod.description}</td> */}
       </Link>
