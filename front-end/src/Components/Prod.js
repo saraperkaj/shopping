@@ -9,7 +9,7 @@ function Prod({ prod }) {
           <img src={prod.img} width="200" alt={prod.name} />
         </p>
         <p>${Number(prod.price).toFixed(2)}</p>
-        <p>{prod.rating}</p>
+        <p>Rating: {prod.rating}/5</p>
         {/* <p>{prod.description}</p> */}
       </Link>
       <Link to={`/`}>
