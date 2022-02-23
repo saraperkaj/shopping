@@ -38,14 +38,16 @@ function ProdDetails() {
   return (
     <div>
       <>
-        <p>{prod.name}</p>
+        <p>{prod.name.toUpperCase()}</p>
         <p>
           <img src={prod.img} width="200" alt={prod.name} />
         </p>
         <p>{Number(prod.price).toFixed(2)}</p>
         <p>{prod.rating}</p>
         <p>{prod.description}</p>
-        <p>{prod.featured ? <span>🌟</span> : <span> &nbsp; </span>}</p>
+        <Link to={`/`}>
+          <p>{prod.featured ? <span>🌟</span> : <span> &nbsp; </span>}</p>
+        </Link>
       </>
       <Link to={`/products/${id}/edit`}>
         <button>Edit</button>

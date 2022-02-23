@@ -4,7 +4,7 @@ function Prod({ prod }) {
   return (
     <>
       <Link to={`/products/${prod.id}`}>
-        <p>{prod.name}</p>
+        <p>{prod.name.toUpperCase()}</p>
         <p>
           <img src={prod.img} width="200" alt={prod.name} />
         </p>

@@ -59,7 +59,7 @@ function EditProd() {
         <input
           id="name"
           name="name"
-          value={prod.name}
+          value={prod.name.toUpperCase()}
           type="text"
           onChange={handleTextChange}
           placeholder="REAVER VANDAL"
@@ -84,14 +84,26 @@ function EditProd() {
           onChange={handleTextChange}
           required
         />
-        <label htmlFor="rating">Rate it from 1-5:</label>
-        <input
+        <label htmlFor="rating">Rating:</label>
+        {/* <input
           id="rating"
           name="rating"
           value={prod.rating}
-          type="number"
+          type="select"
           onChange={handleTextChange}
-        />
+        /> */}
+        <select
+          name="rating"
+          id="rating"
+          value={prod.rating}
+          onChange={handleTextChange}
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
         <label htmlFor="description">Description:</label>
         <input
           id="description"
