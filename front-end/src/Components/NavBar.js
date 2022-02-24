@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import "bulma/css/bulma.min.css";
 
 function NavBar() {
   return (
-    <nav>
+    <nav className="navbar">
       <div>
         <button className="button is-link is-inverted">
           <Link to={"/products"}>Products</Link>

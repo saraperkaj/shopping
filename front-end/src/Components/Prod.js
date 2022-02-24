@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Prod({ prod }) {
   return (
-    <div className="content is-large">
+    <div className="content is-large column is-mobile">
       <Link to={`/products/${prod.id}`}>
         <p className="title is-1">{prod.name.toUpperCase()}</p>
         <p>

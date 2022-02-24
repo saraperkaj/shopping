@@ -22,10 +22,8 @@ function Prods() {
     return prods ? (
       prods.map((prod) => {
         return (
-          <div key={prod.id}>
-            <div>
-              <Prod key={prod.id} prod={prod} />
-            </div>
+          <div key={prod.id} className="column">
+            <Prod key={prod.id} prod={prod} />
           </div>
         );
       })
